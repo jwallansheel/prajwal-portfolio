@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Optional: Background color for the body */
+}
+
+.stopwatch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.stopwatch-display {
+    background-color: rgba(128, 128, 128, 0.7); /* Translucent grey */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.time-display {
+    font-size: 48px; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: white; /* Text color */
+    margin: 0; /* Remove default margin */
+}
+
+.button-container {
+    margin-top: 20px; /* Space between display and buttons */
+}
+
+button {
+    margin: 5px; /* Space between buttons */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
