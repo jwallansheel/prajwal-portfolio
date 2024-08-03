@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes, useNavigate, useLocation } from
 import './resources/transition.css'
 import About from './componente/about';
 import Stopwatch from './componente/shorts/Stopwatch';
+import Lapper from './componente/shorts/Lapper';
 
 function App() {
   const navigate=useNavigate();
@@ -51,6 +52,8 @@ function AppWrapper() {
           <Route path="/" element={<App />} />
           <Route path="/about" element={<About />} />
           <Route path="/Stopwatch" element={<Stopwatch/>}/>
+          <Route path="/Lapper" element={<Lapper/>}/>
+
         </Routes>
       </CSSTransition>
     </TransitionGroup>

@@ -1,0 +1,36 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  svg {
+    border: 1px solid black;
+    margin-bottom: 20px;
+  }
+  
+  circle {
+    transition: cx 0.1s linear, cy 0.1s linear;
+  }
+  
+  .lap-times {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .lap-time-container {
+    margin: 10px;
+  }
+  
+  .lap-times h2 {
+    margin: 10px 0;
+  }
+  
+  .lap-times ul {
+    list-style: none;
+    padding: 0;
+  }
+  
