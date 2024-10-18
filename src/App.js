@@ -13,6 +13,7 @@ import Stopwatch from "./componente/shorts/Stopwatch";
 import Lapper from "./componente/shorts/Lapper";
 import Shopper from "./componente/shorts/Shopper";
 import Grid from "./componente/shorts/CGOL";
+import Flapper from "./componente/shorts/flapper";
 
 function App() {
   const navigate = useNavigate();
@@ -63,6 +64,7 @@ function AppWrapper() {
             <Route path="/Lapper" element={<Lapper />} />
             <Route path="/Shopper" element={<Shopper />} />
             <Route path="/GOL" element={<Grid />} />
+            <Route path="/flapper" element={<Flapper />} />
           </Routes>
         </div>
       </CSSTransition>

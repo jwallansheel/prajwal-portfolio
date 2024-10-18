@@ -91,6 +91,7 @@ const Grid = () => {
             runSimulation();
           }
         }}
+        className="bg-blue-500 border-1 p-4 m-5 rounded-lg"
       >
         {running ? "Stop" : "Start"}
       </button>
@@ -100,6 +101,7 @@ const Grid = () => {
           setPopulation(0); // Reset population when grid is reset
           setGeneration(0); // Reset generation when grid is reset
         }}
+        className="bg-blue-500 border-1 p-4 m-5 rounded-lg"
       >
         Reset
       </button>
@@ -114,10 +116,11 @@ const Grid = () => {
           setPopulation(newGrid.flat().filter((cell) => cell === 1).length); // Calculate initial population
           setGeneration(0); // Reset generation when grid is randomized
         }}
+        className="bg-blue-500 border-1 p-4 m-5 rounded-lg"
       >
         Randomize
       </button>
-      <div>
+      <div className="bg-blue-500 border-1 p-4 m-5 rounded-lg">
         Population: {population} | Generation: {generation}
       </div>
       <div
@@ -142,7 +145,7 @@ const Grid = () => {
               style={{
                 width: 20,
                 height: 20,
-                backgroundColor: grid[rowIndex][colIndex] ? "red" : undefined,
+                backgroundColor: grid[rowIndex][colIndex] ? "white" : undefined,
                 border: "solid 1px grey",
               }}
             />

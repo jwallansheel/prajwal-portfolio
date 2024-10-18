@@ -8,17 +8,3 @@ module.exports = {
   },
   plugins: [],
 };
-.fade-enter {
-  @apply opacity-0;
-}
-.fade-enter-active {
-  @apply opacity-100 transition-opacity duration-300;
-}
-.fade-exit {
-  @apply opacity-100;
-}
-.fade-exit-active {
-  @apply opacity-0 transition-opacity duration-300;
-}
-
-

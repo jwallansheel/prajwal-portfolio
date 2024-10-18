@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./../shorts/Lapper.css";
 
 // F1-inspired car colors
 const carColors = [
@@ -10,26 +9,10 @@ const carColors = [
   "#E10600",
   "#00B0F0",
   "#B6BABD",
-  "#0600EF",
-  "#9B0000",
-  "#006F62",
-  "#0090D2",
-  "#005AFF",
-  "#DC0000",
-  "#44C8F5",
-  "#FFFFFF",
-  "#3671C6",
-  "#C92D4B",
-  "#006F62",
-  "#2293D1",
-  "#005AFF",
 ];
 
 // Initial speeds for each car
-const initialSpeeds = [
-  1, 1.2, 1.4, 1.6, 1.8, 2, 1, 1.5, 1.2, 1.4, 1.6, 1.8, 2, 1.5, 1, 1.2, 1.4,
-  1.6, 1.8, 2,
-];
+const initialSpeeds = [1, 1.2, 1.4, 1.6, 1.8, 2, 1];
 
 const App = () => {
   const [carPositions, setCarPositions] = useState(carColors.map(() => 0));
@@ -144,9 +127,7 @@ const App = () => {
   const InformationPanel = () => (
     <div className="info-panel bg-gray-900 p-6 rounded-lg text-white">
       <h2 className="text-2xl font-bold">Simulation Information</h2>
-      <p className="mt-2">
-        This is a simulation of the Spa-Francorchamps racing track.
-      </p>
+      <p className="mt-2">This is a simulation of a simple racing track.</p>
       <p className="mt-2">
         Each car has a different speed that can be adjusted using the sliders.
       </p>
@@ -160,7 +141,7 @@ const App = () => {
   return (
     <div className="bg-gray-900 min-h-screen p-6 flex w-screen flex-row ">
       <header className="text-white text-center mb-8">
-        <h1 className="text-4xl font-bold">Spa-Francorchamps Simulation</h1>
+        <h1 className="text-4xl font-bold">Lapper : A Racetrack Simulation</h1>
       </header>
 
       <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8">
