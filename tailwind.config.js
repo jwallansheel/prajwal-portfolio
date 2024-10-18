@@ -1,8 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // Include all .js/.jsx/.ts/.tsx files in the src folder
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
 .fade-enter {
   @apply opacity-0;
 }
@@ -15,3 +20,5 @@
 .fade-exit-active {
   @apply opacity-0 transition-opacity duration-300;
 }
+
+
