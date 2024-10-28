@@ -40,6 +40,12 @@ const About = () => {
         "https://imgs.search.brave.com/4Fq2TwOscXVhl4cczQucMzsu2ymtJSbF9jROx6T30dc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L0dhbWVfb2Zf/bGlmZV9kaWVoYXJk/LnN2Zw",
       route: "/Flapper",
     },
+    {
+      title: "Turreter",
+      image:
+        "https://imgs.search.brave.com/4Fq2TwOscXVhl4cczQucMzsu2ymtJSbF9jROx6T30dc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L0dhbWVfb2Zf/bGlmZV9kaWVoYXJk/LnN2Zw",
+      route: "/Flapper",
+    },
     // Add more projects as needed
   ];
 
@@ -53,10 +59,13 @@ const About = () => {
           <h2 className="text-4xl font-bold">About Me</h2>
           <p className="text-lg">Hey!!</p>
           <p className="text-lg">I am Prajwal, A Developer</p>
-          <p className="text-base leading-relaxed">
+          <p className="text-base leading-relaxed text-wrap  text-center">
             Being a Developer, I have a knack to 'Develop' or engineer stuff for
-            fun and for purpose. Following this is a cascade of my projects,
-            which are in continuous development.
+            fun and for purpose. Following this is a cascade of my projects,of
+            which some are complete and some are kept in continuous
+            development.My projects are not limited to web development but also
+            extend to CAD modelling,Vehicle dynamics and IOT, thanks to my
+            educational background in Electronics and communication engineering.
           </p>
           <button
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full mt-6 transition-all duration-300 ease-in-out"

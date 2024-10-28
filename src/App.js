@@ -24,28 +24,80 @@ function App() {
   }
 
   return (
-    <div className="App w-screen">
-      <header className="App-header flex flex-col justify-center items-center h-screen w-full bg-gray-900 text-white">
+    <div className="App w-screen h-screen relative overflow-hidden">
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 w-full h-full object-cover opacity-80"
+      >
+        {/* <source src={backgroundVideo} type="video/mp4" /> */}
+      </video>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+
+      {/* Centered Content */}
+      <header className="App-header flex flex-col justify-center items-center h-full text-white relative z-10">
         <img
           src={logo}
           className="App-logo w-24 h-24 animate-spin duration-[100000ms]"
           alt="logo"
         />
-        <p className="text-lg mt-4">
-          Hello Visitor, I'm Prajwal Vernekar, a React and ASP.Net Developer.
-        </p>
-        <p className="text-base mt-2 text-center px-4">
-          Welcome to my Portfolio, a glimpse of my professional life and how my
-          skills may prove to be of value.
-        </p>
-
+        <div className="text-center mt-6 px-6">
+          <p className="text-2xl font-semibold">
+            Welcome! I'm Prajjwal Vernekar, <br />a React and ASP.Net Developer
+          </p>
+          <p className="text-sm mt-2">
+            Explore my portfolio to see how my skills in web development and
+            design can drive impactful projects.
+          </p>
+        </div>
         <button
           onClick={handleProjects}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 mt-8 rounded-full z-40 transition-all duration-300 ease-in-out"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 mt-6 rounded-full transition-all duration-300 ease-in-out"
         >
-          Press to know about my projects
+          Explore My Projects
         </button>
       </header>
+
+      {/* Floating Tabs - Vertically aligned on both sides */}
+      <div className="absolute inset-y-0 left-10 flex flex-col justify-center gap-6 z-10">
+        {["My Resume'", "What's the point?", "My Vision"].map((tab, idx) => (
+          <div
+            key={idx}
+            className="floating-tab group relative bg-white w-60 h-60 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-110"
+          >
+            <img
+              src={`path_to_image_${idx}.jpg`} // Replace with actual image paths
+              alt={`Preview of ${tab}`}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-sm">{tab}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="absolute inset-y-0 right-10 flex flex-col justify-center gap-6 z-10">
+        {["Education", "hobbies", "Skills"].map((tab, idx) => (
+          <div
+            key={idx}
+            className="floating-tab group relative bg-white w-60 h-60 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-110"
+          >
+            <img
+              src={`path_to_image_${idx + 3}.jpg`} // Replace with actual image paths
+              alt={`Preview of ${tab}`}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-sm">{tab}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

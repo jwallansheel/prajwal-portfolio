@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 
-// F1-inspired car colors
 const carColors = [
   "#FF1242",
   "#00D2BE",
@@ -10,8 +9,6 @@ const carColors = [
   "#00B0F0",
   "#B6BABD",
 ];
-
-// Initial speeds for each car
 const initialSpeeds = [1, 1.2, 1.4, 1.6, 1.8, 2, 1];
 
 const App = () => {
@@ -19,6 +16,19 @@ const App = () => {
   const [lapTimes, setLapTimes] = useState(carColors.map(() => []));
   const [carSpeeds, setCarSpeeds] = useState(initialSpeeds);
   const lapStartTimes = useRef(carColors.map(() => Date.now()));
+
+  const trackPath = [
+    { x: 100, y: 300 },
+    { x: 200, y: 100 },
+    { x: 300, y: 150 },
+    { x: 400, y: 100 },
+    { x: 500, y: 200 },
+    { x: 550, y: 300 },
+    { x: 500, y: 400 },
+    { x: 300, y: 450 },
+    { x: 200, y: 400 },
+    { x: 100, y: 300 },
+  ];
 
   const handleSpeedChange = (index, speed) => {
     setCarSpeeds((prevSpeeds) => {
@@ -30,8 +40,8 @@ const App = () => {
 
   useEffect(() => {
     const animate = () => {
-      setCarPositions((prevPositions) => {
-        return prevPositions.map((position, index) => {
+      setCarPositions((prevPositions) =>
+        prevPositions.map((position, index) => {
           const newPosition = position + carSpeeds[index] * 0.002;
           if (newPosition >= trackPath.length) {
             const lapTime = (
@@ -46,25 +56,12 @@ const App = () => {
             });
           }
           return newPosition % trackPath.length;
-        });
-      });
+        })
+      );
       requestAnimationFrame(animate);
     };
     animate();
   }, [carSpeeds]);
-
-  const trackPath = [
-    { x: 100, y: 300 },
-    { x: 200, y: 100 },
-    { x: 300, y: 150 },
-    { x: 400, y: 100 },
-    { x: 500, y: 200 },
-    { x: 550, y: 300 },
-    { x: 500, y: 400 },
-    { x: 300, y: 450 },
-    { x: 200, y: 400 },
-    { x: 100, y: 300 },
-  ];
 
   const interpolatePosition = (start, end, t) => ({
     x: start.x + (end.x - start.x) * t,
@@ -133,22 +130,24 @@ const App = () => {
       </p>
       <p className="mt-2">Lap times are recorded and displayed for each car.</p>
       <p className="mt-2">
-        Use the simulation to see how different speeds affect lap times!
+        Use the simulation to see how different speeds affect lap times! this
+        mini project involves making use of react hooks and state
+        management,along with basic coordinate system to create a track and cars
+        that run on it. Built in React
       </p>
     </div>
   );
 
   return (
-    <div className="bg-gray-900 min-h-screen p-6 flex w-screen flex-row ">
+    <div className="bg-gray-900 min-h-screen p-6 flex flex-col items-center">
       <header className="text-white text-center mb-8">
-        <h1 className="text-4xl font-bold">Lapper : A Racetrack Simulation</h1>
+        <h1 className="text-4xl font-bold">Lapper: A Racetrack Simulation</h1>
       </header>
 
       <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="info-section flex flex-col items-center">
           <InformationPanel />
         </div>
-
         <div className="slider-section flex flex-col items-end">
           {carColors.map((color, index) => (
             <SpeedSlider

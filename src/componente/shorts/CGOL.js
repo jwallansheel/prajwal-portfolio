@@ -83,6 +83,23 @@ const Grid = () => {
 
   return (
     <div className="w-screen bg-black min-h-screen grid justify-center flex-col">
+      <div className="absolute inset-y-0 left-10 flex flex-col justify-center gap-6 z-10">
+        {["My Resume'", "What's the point?", "My Vision"].map((tab, idx) => (
+          <div
+            key={idx}
+            className="floating-tab group relative bg-white w-60 h-60 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-110"
+          >
+            <img
+              src={`path_to_image_${idx}.jpg`} // Replace with actual image paths
+              alt={`Preview of ${tab}`}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-sm">{tab}</p>
+            </div>
+          </div>
+        ))}
+      </div>
       <button
         onClick={() => {
           setRunning(!running);
