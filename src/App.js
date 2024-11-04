@@ -13,7 +13,8 @@ import Stopwatch from "./componente/shorts/Stopwatch";
 import Lapper from "./componente/shorts/Lapper";
 import Shopper from "./componente/shorts/Shopper";
 import Grid from "./componente/shorts/CGOL";
-import Flapper from "./componente/shorts/flapper";
+import Turret from "./componente/shorts/turreteer";
+import bgi from "/home/jwallansheel/Documents/VS builds/prajwal-portfolio/src/resources/WhatsApp Image 2024-10-31 at 7.18.27 PM.jpeg";
 
 function App() {
   const navigate = useNavigate();
@@ -26,14 +27,19 @@ function App() {
   return (
     <div className="App w-screen h-screen relative overflow-hidden">
       {/* Background video */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
         className="absolute inset-0 w-full h-full object-cover opacity-80"
       >
-        {/* <source src={backgroundVideo} type="video/mp4" /> */}
-      </video>
+        <source src={backgroundVideo} type="video/mp4" />
+      </video> */}
+      <img
+        src={bgi}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover opacity-100"
+      />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -47,11 +53,12 @@ function App() {
         />
         <div className="text-center mt-6 px-6">
           <p className="text-2xl font-semibold">
-            Welcome! I'm Prajjwal Vernekar, <br />a React and ASP.Net Developer
+            Welcome! I'm Prajjwal Vernekar, <br /> And this is my Portfolio
           </p>
-          <p className="text-sm mt-2">
-            Explore my portfolio to see how my skills in web development and
-            design can drive impactful projects.
+          <p className="text-l mt-2">
+            Explore my portfolio to see how my skills in web development,
+            design, project management and general curiosity to make life better
+            can drive impactful projects and provide value.
           </p>
         </div>
         <button
@@ -116,7 +123,7 @@ function AppWrapper() {
             <Route path="/Lapper" element={<Lapper />} />
             <Route path="/Shopper" element={<Shopper />} />
             <Route path="/GOL" element={<Grid />} />
-            <Route path="/flapper" element={<Flapper />} />
+            <Route path="/Turret" element={<Turret />} />
           </Routes>
         </div>
       </CSSTransition>

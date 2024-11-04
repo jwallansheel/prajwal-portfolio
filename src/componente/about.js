@@ -34,17 +34,12 @@ const About = () => {
         "https://imgs.search.brave.com/4Fq2TwOscXVhl4cczQucMzsu2ymtJSbF9jROx6T30dc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L0dhbWVfb2Zf/bGlmZV9kaWVoYXJk/LnN2Zw",
       route: "/GOL",
     },
-    {
-      title: "Angry flapper",
-      image:
-        "https://imgs.search.brave.com/4Fq2TwOscXVhl4cczQucMzsu2ymtJSbF9jROx6T30dc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L0dhbWVfb2Zf/bGlmZV9kaWVoYXJk/LnN2Zw",
-      route: "/Flapper",
-    },
+
     {
       title: "Turreter",
       image:
         "https://imgs.search.brave.com/4Fq2TwOscXVhl4cczQucMzsu2ymtJSbF9jROx6T30dc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L0dhbWVfb2Zf/bGlmZV9kaWVoYXJk/LnN2Zw",
-      route: "/Flapper",
+      route: "/Turret",
     },
     // Add more projects as needed
   ];
