@@ -5,7 +5,7 @@ import pdfFile from "./path/to/your.pdf"; // Adjust the path to your PDF file
 
 function ResumeViewer() {
   // Email for the "Get in Touch" button
-  const email = "contact@example.com";
+  const email = "prajwalbutcorporate@gmail.com";
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
