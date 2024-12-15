@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/prajwal-portfolio/static/css/main.2e973778.css",
+    "main.js": "/prajwal-portfolio/static/js/main.9bf62b09.js",
+    "static/js/453.7f050a90.chunk.js": "/prajwal-portfolio/static/js/453.7f050a90.chunk.js",
+    "static/media/WhatsApp Image 2024-10-31 at 7.18.27 PM.jpeg": "/prajwal-portfolio/static/media/WhatsApp Image 2024-10-31 at 7.18.27 PM.800f9cdf9d0b0a073860.jpeg",
+    "static/media/logo.svg": "/prajwal-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/prajwal-portfolio/index.html",
+    "main.2e973778.css.map": "/prajwal-portfolio/static/css/main.2e973778.css.map",
+    "main.9bf62b09.js.map": "/prajwal-portfolio/static/js/main.9bf62b09.js.map",
+    "453.7f050a90.chunk.js.map": "/prajwal-portfolio/static/js/453.7f050a90.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e973778.css",
+    "static/js/main.9bf62b09.js"
+  ]
+}
