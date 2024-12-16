@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import {
@@ -14,27 +13,22 @@ import Lapper from "./componente/shorts/Lapper";
 import Shopper from "./componente/shorts/Shopper";
 import Grid from "./componente/shorts/CGOL";
 import Turret from "./componente/shorts/turreteer";
-import bgi from "/home/jwallansheel/Documents/VS builds/prajwal-portfolio/src/resources/WhatsApp Image 2024-10-31 at 7.18.27 PM.jpeg";
+import ResumeViewer from "./componente/pages/resume";
+import logo from "./logo.svg";
+import bgi from "./resources/background.jpeg"; // Updated path for clarity
+import "./App.css";
 
 function App() {
   const navigate = useNavigate();
 
   function handleProjects() {
-    console.log("Going to About Section");
+    console.log("Navigating to About Section");
     navigate("/about");
   }
 
   return (
     <div className="App w-screen h-screen relative overflow-hidden">
-      {/* Background video */}
-      {/* <video
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover opacity-80"
-      >
-        <source src={backgroundVideo} type="video/mp4" />
-      </video> */}
+      {/* Background image */}
       <img
         src={bgi}
         alt="Background"
@@ -57,8 +51,8 @@ function App() {
           </p>
           <p className="text-l mt-2">
             Explore my portfolio to see how my skills in web development,
-            design, project management and general curiosity to make life better
-            can drive impactful projects and provide value.
+            design, project management, and curiosity to improve life can drive
+            impactful projects and provide value.
           </p>
         </div>
         <button
@@ -71,9 +65,10 @@ function App() {
 
       {/* Floating Tabs - Vertically aligned on both sides */}
       <div className="absolute inset-y-0 left-10 flex flex-col justify-center gap-6 z-10">
-        {["My Resume'", "What's the point?", "My Vision"].map((tab, idx) => (
+        {["Resume", "What's the point?", "My Vision"].map((tab, idx) => (
           <div
             key={idx}
+            onClick={() => navigate(`/${tab} `)}
             className="floating-tab group relative bg-white w-60 h-60 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-110"
           >
             <img
@@ -89,7 +84,7 @@ function App() {
       </div>
 
       <div className="absolute inset-y-0 right-10 flex flex-col justify-center gap-6 z-10">
-        {["Education", "hobbies", "Skills"].map((tab, idx) => (
+        {["Education", "Hobbies", "Skills"].map((tab, idx) => (
           <div
             key={idx}
             className="floating-tab group relative bg-white w-60 h-60 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-110"
@@ -115,17 +110,16 @@ function AppWrapper() {
   return (
     <TransitionGroup>
       <CSSTransition key={location.key} classNames="fade" timeout={300}>
-        <div>
-          <Routes location={location}>
-            <Route path="/" element={<App />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/Stopwatch" element={<Stopwatch />} />
-            <Route path="/Lapper" element={<Lapper />} />
-            <Route path="/Shopper" element={<Shopper />} />
-            <Route path="/GOL" element={<Grid />} />
-            <Route path="/Turret" element={<Turret />} />
-          </Routes>
-        </div>
+        <Routes location={location}>
+          <Route path="/prajwal-portfolio" element={<App />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Stopwatch" element={<Stopwatch />} />
+          <Route path="/Lapper" element={<Lapper />} />
+          <Route path="/Shopper" element={<Shopper />} />
+          <Route path="/GOL" element={<Grid />} />
+          <Route path="/Turret" element={<Turret />} />
+          <Route path="/resume" element={<ResumeViewer />} />
+        </Routes>
       </CSSTransition>
     </TransitionGroup>
   );
